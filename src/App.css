@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&family=Manrope:wght@400;500;700&display=swap");
+
+:root {
+  --tinta: #000;
+  --papel: #fff;
+  --titulos: "Lexend", system-ui, sans-serif;
+  --texto: "Manrope", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body, #root { margin: 0; padding: 0; background: #e9e9e9; }
+
+body {
+  font-family: var(--texto);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--tinta);
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--tinta); outline-offset: 2px; }
+
+ul { margin: 0; padding-left: 1.2em; }
+h1, h2, h3, p { margin: 0; }
+
+/* Hoja tipo A4 */
+.hoja {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 2.5rem 2.5rem;
+  background: var(--papel);
+}
+
+/* Cabecera */
+.cabecera {
+  text-align: center;
+  padding-top: 5.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 3px solid var(--tinta);
+  position: relative;
+}
+.cabecera__linea {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 3.5rem;
+  background: var(--tinta);
+}
+.nombre {
+  font-family: var(--titulos);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 6vw, 3.1rem);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  color: #000;
+}
+.titulo { 
+  font-size: 1rem; 
+  margin-top: 0.4rem; 
+  color: #000;
+
+}
+
+/* Títulos de sección */
+.seccion {
+  font-family: var(--titulos);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.1rem;
+    color: #000;
+
+}
+
+/* Sobre mí + contacto */
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 3px solid var(--tinta);
+  color: #000;
+  text-align: left;
+}
+.contacto { list-style: none; padding: 0; display: grid; gap: 0.8rem; align-content: start; }
+.contacto li { display: flex; gap: 0.6rem; align-items: flex-start; }
+.contacto a { overflow-wrap: anywhere; }
+.icono { width: 1.1rem; height: 1.1rem; flex: none; margin-top: 0.1rem; }
+
+/* Cuerpo a dos columnas */
+.cuerpo {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  padding-top: 1.5rem;
+}
+.aptitudes { padding-right: 1.5rem; border-right: 2px solid var(--tinta); text-align: left; }
+.principal { padding-left: 1.8rem; display: grid; gap: 1.8rem; align-content: start; }
+
+.grupo { margin-bottom: 1.4rem; }
+.grupo h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+.aptitudes li { font-size: 0.9rem; margin-bottom: 0.2rem; }
+
+/* Entradas de experiencia y educación */
+.entrada { margin-bottom: 1.4rem; text-align: left; }
+.entrada__cabecera {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+.entrada h3 { font-size: 0.95rem; font-weight: 700; }
+.puesto { font-size: 0.85rem; margin-top: 0.3rem; }
+.fechas { text-align: right; font-size: 0.85rem; white-space: nowrap; }
+.entrada--corta .entrada__cabecera { margin-bottom: 0.3rem; }
+.entrada--corta { margin-bottom: 0.8rem; }
+.entrada li { margin-bottom: 0.15rem; }
+.pequena { font-size: 0.85rem; }
+
+/* Móvil */
+@media (max-width: 720px) {
+  .hoja { margin: 0; padding: 0 1.2rem 2rem; }
+  .sobre-mi, .cuerpo { grid-template-columns: 1fr; }
+  .aptitudes { border-right: 0; border-bottom: 2px solid var(--tinta); padding: 0 0 1rem; margin-bottom: 1.5rem; }
+  .principal { padding-left: 0; }
+  .fechas { white-space: normal; }
+}
+
+/* Imprimir / guardar como PDF */
+@media print {
+  html, body, #root { background: #fff; }
+  .hoja { margin: 0; max-width: none; padding: 0 1.5rem; }
+  .entrada { break-inside: avoid; }
+  a { text-decoration: none; }
+}
