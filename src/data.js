@@ -103,8 +103,25 @@ export const contenido = {
         aptitudes: "Aptitudes",
         educacion: "Educación",
         experiencia: "Experiencia",
+        proyectos: "Proyectos",
       },
       idioma: "English version",
+      proyectos: "_PROYECTOS_PERSONALES",
+    },
+    proyectos: {
+      descripcion: "A continuación podéis visitar los diferentes proyectos que he hecho mientras estaba estudiando.",
+      items: [
+        {
+          nombre: "Bressolium",
+          imagen: "",
+          url: "https://github.com/Michelle-Sebi/Bressolium",
+        },
+        {
+          nombre: "Cocina para intolerantes",
+          imagen: "",
+          url: "https://github.com/barbarabur/cocina-para-intolerantes-DIW",
+        },
+      ],
     },
   },
   en: {
@@ -207,8 +224,25 @@ export const contenido = {
         aptitudes: "Skills",
         educacion: "Education",
         experiencia: "Experience",
+        proyectos: "Projects",
       },
       idioma: "Versión española",
+      proyectos: "_PERSONAL_PROJECTS",
+    },
+    proyectos: {
+      descripcion: "Below you can visit the different projects I have made while studying.",
+      items: [
+        {
+          nombre: "Bressolium",
+          imagen: "",
+          url: "https://github.com/Michelle-Sebi/Bressolium",
+        },
+        {
+          nombre: "Cooking for intolerances",
+          imagen: "",
+          url: "https://github.com/barbarabur/cocina-para-intolerantes-DIW",
+        },
+      ],
     },
   },
 };

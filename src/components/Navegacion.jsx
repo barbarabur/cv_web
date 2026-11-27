@@ -5,6 +5,7 @@ function Navegacion({ idioma, setIdioma, titulos, textoIdioma }) {
       <a href="#aptitudes">{titulos.aptitudes}</a>
       <a href="#educacion">{titulos.educacion}</a>
       <a href="#experiencia">{titulos.experiencia}</a>
+      <a href="#proyectos">{titulos.proyectos}</a>
       <button
         type="button"
         className="boton-idioma"
