@@ -1,9 +1,7 @@
-import { aptitudes } from "../data";
-
-function Aptitudes() {
+function Aptitudes({ aptitudes, titulo }) {
   return (
     <aside id="aptitudes" className="aptitudes">
-      <h2 className="seccion">_APTITUDES</h2>
+      <h2 className="seccion">{titulo}</h2>
       {aptitudes.map((grupo) => (
         <div key={grupo.titulo} className="grupo">
           <h3>{grupo.titulo}</h3>

@@ -44,7 +44,7 @@ export const experiencia = [
     puesto: "Prácticas formativas",
     lugar: "Valencia",
     fechas: "Mar 2026 - may 2026",
-    tareas: ["Desarrollo front-end de aplicaciones utilizando Angular, React, JavaScript, TypeScript, Tailwind y Bootstrap"],
+    tareas: ["Desarrollo front-end de aplicaciones utilizando Angular, React, JavaScript, TypeScript, Tailwind y Bootstrap. Integración con APIs y creación de tests"],
   },
   {
     empresa: "Saltarinas S.L.",
@@ -85,3 +85,128 @@ export const educacion = [
     centro: "Colegio Juan Comenius", 
     fechas: "Sept 1999 - Jun 2001" },
 ];
+
+export const contenido = {
+  es: {
+    perfil,
+    aptitudes,
+    experiencia,
+    educacion,
+    titulos: {
+      sobreMi: "_SOBRE_MI",
+      aptitudes: "_APTITUDES",
+      experiencia: "_EXPERIENCIA_LABORAL",
+      educacion: "_EDUCACIÓN",
+      menu: {
+        perfil: "Sobre mí",
+        aptitudes: "Aptitudes",
+        educacion: "Educación",
+        experiencia: "Experiencia",
+      },
+      idioma: "English version",
+    },
+  },
+  en: {
+    perfil: {
+      nombre: "Bárbara González",
+      titulo: "Web Developer",
+      sobreMi:
+        "Photographer turned web developer. I am passionate about connecting the technical side with visual design. I come from dynamic and creative environments where I have worked with digital workflows, project management, conceptual design and direct client communication. I enjoy finding practical solutions and would like to join a team where I can contribute this combination of technical skill and aesthetic judgement.",
+      contacto: {
+        telefono: "676 338 354",
+        email: "gonzalezperez.barbara@gmail.com",
+        linkedin: "https://www.linkedin.com/in/barbara-gonzalez-perez/",
+      },
+    },
+    aptitudes: [
+      {
+        titulo: "Technical Skills",
+        items: [
+          "Languages and technologies: JavaScript, TypeScript, Node.js, PHP, AWS, HTML, CSS",
+          "Frameworks: React, Redux, Angular, Laravel",
+          "Databases: SQL",
+          "Version control: GitHub, GitLab",
+          "Tools: Trello, Notion",
+          "Platforms and ERPs: Microsoft Dynamics 365 Business Central, Holded",
+          "Methodologies: TDD, Certified Scrum Developer (CSD), Design Thinking",
+          "Design: Adobe Creative Suite, Figma",
+        ],
+      },
+      {
+        titulo: "Professional Skills",
+        items: [
+          "Project management",
+          "Team coordination",
+          "Organisation and planning",
+          "Attention to detail",
+          "Communication and teamwork",
+        ],
+      },
+      { titulo: "Languages", items: ["English: B2", "Valencian: B2"] },
+      { titulo: "Other", items: ["Own vehicle"] },
+    ],
+    experiencia: [
+      {
+        empresa: "Sopra Steria",
+        puesto: "Internship",
+        lugar: "Valencia",
+        fechas: "Mar 2026 - May 2026",
+        tareas: ["Front-end application development using Angular, React, JavaScript, TypeScript, Tailwind and Bootstrap.  API integration and coverage tests"],
+      },
+      {
+        empresa: "Saltarinas S.L.",
+        puesto: "Project Management",
+        lugar: "Valencia",
+        fechas: "Feb 2022 - Nov 2024",
+        tareas: [
+          "Project planning and monitoring.",
+          "Coordination of multidisciplinary teams using organisational methodologies.",
+          "Administrative management, tender procedures, technical documentation and reporting.",
+        ],
+      },
+      {
+        empresa: "Estudio Fotográfico Carlos Gutiérrez, Attitude Fotografía, Arena Studio...",
+        puesto: "Digital post-production",
+        lugar: "Valencia",
+        fechas: "Jun 2008 - Feb 2022",
+        tareas: [
+          "Digital production and post-production focused on results.",
+          "Digital workflow management and coordination of the post-production team.",
+          "Content adaptation to technical and platform standards.",
+          "Layout, design and optimisation of digital material.",
+          "Operational support for creative and technological processes.",
+        ],
+      },
+    ],
+    educacion: [
+      {
+        titulo: "Higher Technical Certificate in Web Application Development",
+        centro: "CEED-CV",
+        fechas: "Sep 2021 - 2026",
+      },
+      {
+        titulo: "Bachelor's Degree in Audiovisual Communication",
+        centro: "Universitat Politècnica de València",
+        fechas: "Sep 2001 - Jun 2006",
+      },
+      {
+        titulo: "Higher Technical Certificate in Image",
+        centro: "Colegio Juan Comenius",
+        fechas: "Sep 1999 - Jun 2001",
+      },
+    ],
+    titulos: {
+      sobreMi: "_ABOUT_ME",
+      aptitudes: "_SKILLS",
+      experiencia: "_WORK_EXPERIENCE",
+      educacion: "_EDUCATION",
+      menu: {
+        perfil: "About me",
+        aptitudes: "Skills",
+        educacion: "Education",
+        experiencia: "Experience",
+      },
+      idioma: "Versión española",
+    },
+  },
+};

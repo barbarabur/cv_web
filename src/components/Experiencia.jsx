@@ -1,9 +1,7 @@
-import { experiencia } from "../data";
-
-function Experiencia() {
+function Experiencia({ experiencia, titulo }) {
   return (
     <section id="experiencia">
-      <h2 className="seccion">_EXPERIENCIA_LABORAL</h2>
+      <h2 className="seccion">{titulo}</h2>
       {experiencia.map((e) => (
         <article key={e.empresa} className="entrada">
           <div className="entrada__cabecera">

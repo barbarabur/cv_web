@@ -1,6 +1,4 @@
-import { perfil } from "../data";
-
-function Header() {
+function Header({ perfil }) {
   return (
     <header className="cabecera">
       <span className="cabecera__linea" aria-hidden="true" />

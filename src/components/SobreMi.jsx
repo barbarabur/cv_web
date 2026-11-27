@@ -1,18 +1,16 @@
-import { perfil } from "../data";
-
 const Icono = ({ children }) => (
   <svg className="icono" viewBox="0 0 24 24" aria-hidden="true">
     {children}
   </svg>
 );
 
-function SobreMi() {
+function SobreMi({ perfil, titulo }) {
   const { telefono, email, linkedin } = perfil.contacto;
 
   return (
     <section id="perfil" className="sobre-mi">
       <div>
-        <h2 className="seccion">_SOBRE_MI</h2>
+        <h2 className="seccion">{titulo}</h2>
         <p>{perfil.sobreMi}</p>
       </div>
 
