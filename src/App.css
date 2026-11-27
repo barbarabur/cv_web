@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&family=Manrope:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&family=Montserrat:wght@400;500;700&display=swap");
 
 :root {
-  --tinta: #000;
-  --papel: #fff;
+  --tinta: #31031F;
+  --papel: #FFF8ED;
+  --acento: #66693E;
   --titulos: "Lexend", system-ui, sans-serif;
-  --texto: "Manrope", system-ui, sans-serif;
+  --texto: "Montserrat", system-ui, sans-serif;
 }
 
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-html, body, #root { margin: 0; padding: 0; background: #e9e9e9; }
+html, body, #root { margin: 0; padding: 0; background: var(--tinta); }
 
 body {
   font-family: var(--texto);
@@ -36,33 +37,44 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* Cabecera */
+.encabezado-fijo {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--papel);
+  margin: 0 -2.5rem;
+}
+
 .cabecera {
   text-align: center;
-  padding-top: 5.5rem;
-  padding-bottom: 1.2rem;
-  border-bottom: 3px solid var(--tinta);
+  padding: 0;
   position: relative;
 }
 .cabecera__linea {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 3.5rem;
-  background: var(--tinta);
+  display: none;
 }
 .nombre {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  background: var(--tinta);
+  color: var(--acento);
   font-family: var(--titulos);
   font-weight: 800;
   font-size: clamp(1.6rem, 6vw, 3.1rem);
   letter-spacing: 0.08em;
   line-height: 1.1;
-  color: #000;
 }
 .titulo { 
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  padding: 0.45rem 0.8rem;
+  background: var(--tinta);
+  color: var(--acento);
+  text-align: center;
   font-size: 1rem; 
-  margin-top: 0.4rem; 
-  color: #000;
+  font-weight: 800;
 
 }
 
@@ -72,38 +84,61 @@ h1, h2, h3, p { margin: 0; }
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.14em;
+  width: 100%;
   margin-bottom: 1.1rem;
-    color: #000;
-
+  padding: 0.55rem 0.8rem;
+  background: var(--acento);
+  color: var(--papel);
+  text-align: left;
 }
 
 /* Sobre mí + contacto */
 .sobre-mi {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 2rem;
+  display: block;
   padding: 1.5rem 0;
-  border-bottom: 3px solid var(--tinta);
-  color: #000;
+  border-bottom: 0;
+  color: var(--tinta);
   text-align: left;
+  background: var(--papel);
 }
-.contacto { list-style: none; padding: 0; display: grid; gap: 0.8rem; align-content: start; }
+.contacto {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+}
 .contacto li { display: flex; gap: 0.6rem; align-items: flex-start; }
 .contacto a { overflow-wrap: anywhere; }
 .icono { width: 1.1rem; height: 1.1rem; flex: none; margin-top: 0.1rem; }
 
-/* Cuerpo a dos columnas */
-.cuerpo {
+/* Cuerpo vertical */
+.principal--vertical {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  padding-top: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
 }
-.aptitudes { padding-right: 1.5rem; border-right: 2px solid var(--tinta); text-align: left; }
-.principal { padding-left: 1.8rem; display: grid; gap: 1.8rem; align-content: start; }
+
+.principal--vertical > section,
+.principal--vertical > aside {
+  width: 100%;
+  border-bottom: 0;
+  padding-bottom: 0;
+  background: var(--papel);
+}
+
+.aptitudes {
+  display: block;
+  padding-right: 0;
+  border-right: 0;
+  text-align: left;
+    background: var(--papel);
+
+}
 
 .grupo { margin-bottom: 1.4rem; }
-.grupo h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
-.aptitudes li { font-size: 0.9rem; margin-bottom: 0.2rem; }
 
 /* Entradas de experiencia y educación */
 .entrada { margin-bottom: 1.4rem; text-align: left; }
@@ -113,27 +148,93 @@ h1, h2, h3, p { margin: 0; }
   gap: 1rem;
   margin-bottom: 0.7rem;
 }
-.entrada h3 { font-size: 0.95rem; font-weight: 700; }
+.entrada h3 { 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  text-align: left; 
+  color: var(--acento);
+}
+.entrada:not(.entrada--corta) h3 {
+  color: var(--tinta);
+}
 .puesto { font-size: 0.85rem; margin-top: 0.3rem; }
 .fechas { text-align: right; font-size: 0.85rem; white-space: nowrap; }
 .entrada--corta .entrada__cabecera { margin-bottom: 0.3rem; }
+.entrada--corta h3 {
+  color: var(--tinta);
+  font-weight: 800;
+}
 .entrada--corta { margin-bottom: 0.8rem; }
 .entrada li { margin-bottom: 0.15rem; }
 .pequena { font-size: 0.85rem; }
+.entrada--corta .pequena li {
+  color: var(--tinta);
+}
+
+/* Navegación */
+html { scroll-behavior: smooth; }
+
+.navegacion {
+  position: relative;
+  top: auto;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0 -2.5rem;
+  padding: 0.7rem 2.5rem;
+  background: var(--tinta);
+  border-bottom: 0;
+  backdrop-filter: blur(8px);
+}
+
+.navegacion a {
+  padding: 0.45rem 0.75rem;
+  font-family: var(--titulos);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--papel);
+}
+
+.navegacion a:hover {
+  background: var(--acento);
+  color: var(--papel);
+  text-decoration: none;
+}
+
+#perfil, #aptitudes, #experiencia, #educacion {
+  scroll-margin-top: 12rem;
+}
 
 /* Móvil */
 @media (max-width: 720px) {
   .hoja { margin: 0; padding: 0 1.2rem 2rem; }
+  .navegacion {
+    margin: 0 -1.2rem;
+    padding: 0.6rem 0.35rem;
+    gap: 0;
+  }
+  .navegacion a {
+    flex: 1;
+    padding: 0.45rem 0.2rem;
+    text-align: center;
+  }
   .sobre-mi, .cuerpo { grid-template-columns: 1fr; }
-  .aptitudes { border-right: 0; border-bottom: 2px solid var(--tinta); padding: 0 0 1rem; margin-bottom: 1.5rem; }
+  .aptitudes { border-right: 0; border-bottom: 0; padding: 0 0 1rem; margin-bottom: 1.5rem; }
   .principal { padding-left: 0; }
   .fechas { white-space: normal; }
 }
 
 /* Imprimir / guardar como PDF */
 @media print {
-  html, body, #root { background: #fff; }
+  html, body, #root { background: var(--papel); }
   .hoja { margin: 0; max-width: none; padding: 0 1.5rem; }
   .entrada { break-inside: avoid; }
   a { text-decoration: none; }
+}
+
+.empresa,
+.centro {
+  color: var(--tinta);
 }

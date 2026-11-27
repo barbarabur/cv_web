@@ -44,7 +44,7 @@ export const experiencia = [
     puesto: "Prácticas formativas",
     lugar: "Valencia",
     fechas: "Mar 2026 - may 2026",
-    tareas: ["Desarrollo front-end de aplicaciones"],
+    tareas: ["Desarrollo front-end de aplicaciones utilizando Angular, React, JavaScript, TypeScript, Tailwind y Bootstrap"],
   },
   {
     empresa: "Saltarinas S.L.",
