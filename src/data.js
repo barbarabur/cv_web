@@ -7,6 +7,7 @@ export const perfil = {
     telefono: "676 338 354",
     email: "gonzalezperez.barbara@gmail.com",
     linkedin: "https://www.linkedin.com/in/barbara-gonzalez-perez/",
+    github: "https://github.com/barbarabur",
   },
 };
 
@@ -116,6 +117,7 @@ export const contenido = {
         telefono: "676 338 354",
         email: "gonzalezperez.barbara@gmail.com",
         linkedin: "https://www.linkedin.com/in/barbara-gonzalez-perez/",
+        github: "https://github.com/barbarabur",
       },
     },
     aptitudes: [

@@ -7,6 +7,7 @@ import SobreMi from "./components/SobreMi";
 import Aptitudes from "./components/Aptitudes";
 import Experiencia from "./components/Experiencia";
 import Educacion from "./components/Educacion";
+import Proyectos from "./components/Proyectos";
 
 export default function App() {
   const [idioma, setIdioma] = useState("es");
@@ -28,6 +29,7 @@ export default function App() {
         <Aptitudes aptitudes={datos.aptitudes} titulo={datos.titulos.aptitudes} />
         <Educacion educacion={datos.educacion} titulo={datos.titulos.educacion} />
         <Experiencia experiencia={datos.experiencia} titulo={datos.titulos.experiencia} />
+        <Proyectos proyectos={datos.proyectos} titulo={datos.titulos.proyectos} />
       </main>
     </div>
   );
